@@ -40,7 +40,7 @@ router.route("/").post(async (req, res) => {
     const image = await fetch(url, options)
       .then((res) => res.json())
       .then((json) => json.image);
-    console.log(image);
+    // console.log(image);
 
     res.status(200).json({ photo: image });
   } catch (error) {
